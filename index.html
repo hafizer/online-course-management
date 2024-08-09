@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Kursus Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Manajemen Kursus Online</h1>
+        
+        <!-- Bagian Manajemen Kursus -->
+        <div class="course-management">
+            <h2>Kelola Kursus</h2>
+            <form id="courseForm">
+                <input type="hidden" id="courseId">
+                <input type="text" id="courseTitle" placeholder="Judul Kursus" required>
+                <input type="text" id="courseDescription" placeholder="Deskripsi Kursus" required>
+                <input type="text" id="courseDuration" placeholder="Durasi Kursus (misal. 10 jam)" required>
+                <button type="submit">Simpan Kursus</button>
+            </form>
+
+            <h3>Daftar Kursus</h3>
+            <ul id="courseList"></ul>
+        </div>
+
+        <!-- Bagian Manajemen Materi -->
+        <div class="material-management">
+            <h2>Kelola Materi Kursus</h2>
+            <form id="materialForm">
+                <input type="hidden" id="materialId">
+                <select id="courseSelect" required></select>
+                <input type="text" id="materialTitle" placeholder="Judul Materi" required>
+                <input type="text" id="materialDescription" placeholder="Deskripsi Materi" required>
+                <input type="text" id="materialLink" placeholder="Link Embed Materi" required>
+                <button type="submit">Simpan Materi</button>
+            </form>
+
+            <h3>Daftar Materi</h3>
+            <ul id="materialList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
